@@ -8,6 +8,29 @@ input[type=radio]:checked + img {
 }
 img {
    width: 400px;
+   height: 400px;
+   padding: 10px;
     
 }
 
+h1 {
+    text-align: center;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 4rem;
+    
+}
+
+body {
+    background-color: #a0b3a8;
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}

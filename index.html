@@ -11,13 +11,16 @@
     <link rel="stylesheet" href="./styles/home.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Indie+Flower&display=swap" rel="stylesheet">
     <title>Rock, Paper, Scissors</title>
 </head>
 
 <body>
     <h1> Let's Play Rock, Paper Scissors!</h1>
     <p>Choose which item you would like to play!
-        Rules:<br>
+       Rules:<br>
         Paper Beats Rock,<br>
         Scissors Beats Paper,<br>
         Rock Beats Scissors! <br>
@@ -35,7 +38,11 @@
         <input type="radio" name="item" id="scissors" value="scissors">
         <img src="./assets/scissors.jpeg.gif" alt="scissors">
     </label> 
+    <p id="draw" class="hidden">It's a draw!</p>
     <button id="play">Let's Play!</button> </section>
+    <p id="result"></p>
+    <p>You have won <span id="wins">0</span> times</p>
+    <p>You have lost <span id="losses">0</span> times</p>
 
     <script type="module" src="./app.js"></script>
 </body>
