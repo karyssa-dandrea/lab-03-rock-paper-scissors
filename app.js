@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { didUserWin, getRandomThrow } from "./utils";
+import { didUserWin, getRandomThrow } from "./utils.js";
 
 const playButton = document.getElementById('play');
 const winSpan = document.getElementById('wins');
@@ -7,10 +7,11 @@ const lossSpan = document.getElementById('losses');
 const draw = document.getElementById('draw');
 const error = document.getElementById('error');
 
+
 // initialize global state
 let wins = 0;
 let losses = 0;
-let draw = 0;
+let draws = 0;
 
 // set event listeners 
   // get user input
@@ -19,6 +20,7 @@ let draw = 0;
 
   playButton.addEventListener('click', ()=>{
     const selected = document.querySelector('input[type=radio]:checked');
+    console.log('button-click');
     if(!selected){
       return error.classList.remove('hidden');
     }
@@ -27,6 +29,8 @@ let draw = 0;
     const computerThrow = getRandomThrow();
     //console.log('userThrow');
     //console.log('computerThrow');
+    
+  
 
     if(didUserWin(userThrow, computerThrow)){
       wins++;
