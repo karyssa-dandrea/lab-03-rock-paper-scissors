@@ -1,18 +1,28 @@
 // IMPORT MODULES under test here:
-// import { example } from '../example.js';
+import { didUserWin } from "../utils.js";
 
 const test = QUnit.test;
 
-test('time to test a function', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const expected = true;
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = true;
+test('user: rock, computer: scissors', (expect) => {
+    const expected = 'wins';
+    const actual = didUserWin('rock', 'scissors');
+    expect.equal(actual, expected);
+});
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
+test('user: rock, computer: paper', (expect) => {
+    const expected = 'losses';
+    const actual = didUserWin('rock', 'paper');
+    expect.equal(actual, expected);
+});
+
+test('user: paper, computer: rock', (expect) => {
+    const expected = 'wins';
+    const actual = didUserWin('paper', 'rock');
+    expect.equal(actual, expected);
+});
+
+test('user: paper, computer: scissors', (expect) => {
+    const expected = 'losses';
+    const actual = didUserWin('paper', 'scissors');
     expect.equal(actual, expected);
 });
