@@ -4,7 +4,7 @@ import { didUserWin, getRandomThrow } from "./utils.js";
 const playButton = document.getElementById('play');
 const winSpan = document.getElementById('wins');
 const lossSpan = document.getElementById('losses');
-const draw = document.getElementById('draw');
+const draw = document.getElementById('draws');
 const error = document.getElementById('error');
 
 
@@ -32,15 +32,16 @@ let draws = 0;
     
   
 
-    if(didUserWin(userThrow, computerThrow)){
-      wins++;
-
-    } else {
-
-      losses++;
-    }
+    if(didUserWin(userThrow, computerThrow)) wins++;
+    if(!didUserWin(userThrow, computerThrow)) losses++;
+    if(userThrow === computerThrow){
+      draws++;
+      console.log('it was a draw');
+    } 
+      
+    
   
     winSpan.textContent = wins;
     lossSpan.textContent = losses;
-    
+    draw.textContent = draws;
   })

@@ -1,5 +1,8 @@
 export function didUserWin(userChoice, actualDraw){
-     return userChoice === actualDraw;
+     if (userChoice === actualDraw){
+         return 'It\'s a draw!'
+     };
+
 }
 
 export function getRandomThrow(){
