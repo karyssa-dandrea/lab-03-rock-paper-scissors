@@ -7,10 +7,13 @@ const lossSpan = document.getElementById('losses');
 const draw = document.getElementById('draws');
 const error = document.getElementById('error');
 const resetButton = document.getElementById('reset');
+const resetDisplay = document.getElementById('reset-display');
 
 let wins = 0;
 let losses = 0;
 let draws = 0;
+let resets = 0;
+
 
   playButton.addEventListener('click', ()=>{
     const selected = document.querySelector('input[type=radio]:checked');
@@ -33,10 +36,12 @@ let draws = 0;
   })
 
   resetButton.addEventListener('click', () => {
+    resets++; 
     wins = 0;
     losses = 0;
     draws = 0;
     winSpan.textContent = wins;
     lossSpan.textContent = losses;
     draw.textContent = draws;
+    resetDisplay.textContent = resets;
   })
