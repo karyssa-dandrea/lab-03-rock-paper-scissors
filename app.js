@@ -6,6 +6,7 @@ const winSpan = document.getElementById('wins');
 const lossSpan = document.getElementById('losses');
 const draw = document.getElementById('draws');
 const error = document.getElementById('error');
+const resetButton = document.getElementById('reset');
 
 
 // initialize global state
@@ -44,4 +45,10 @@ let draws = 0;
     winSpan.textContent = wins;
     lossSpan.textContent = losses;
     draw.textContent = draws;
+  })
+
+  resetButton.addEventListener('click', () => {
+    wins = 0;
+    losses = 0;
+    draws = 0;
   })
