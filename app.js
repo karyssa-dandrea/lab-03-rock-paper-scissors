@@ -36,4 +36,7 @@ let draws = 0;
     wins = 0;
     losses = 0;
     draws = 0;
+    winSpan.textContent = wins;
+    lossSpan.textContent = losses;
+    draw.textContent = draws;
   })
